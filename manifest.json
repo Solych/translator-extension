@@ -1,0 +1,19 @@
+{
+  "name": "Own translator",
+  "description": "Translator",
+  "version": "2.0",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "T.png",
+      "32": "T.png",
+      "48": "T.png"
+    }
+  },
+  "icons": {
+    "16": "T.png",
+    "32": "T.png"
+  }
+}

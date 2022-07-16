@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .container {
+        display: flex;
+    }
+
+    .container__from,
+    .container__to {
+        margin: 0 8px;
+    }
+
+    .container__image {
+        margin-top: 38px;
+    }
+
+    input {
+        border-radius: 4px;
+        font-size: 18px;
+        border: 1px solid gray;
+        outline: none;
+        padding: 5px;
+    }
+
+    ul {
+        padding-inline-start: 0;
+    }
+
+    .to__languages {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .languages__item-from,
+    .languages__item-to {
+        padding: 2px;
+        outline: 2px solid gray;
+        border-radius: 2px;
+    }
+
+    .languages__item-from:hover,
+    .languages__item-to:hover,
+    .container__image:hover {
+        cursor: pointer;
+    }
+
+    .languages__item-from--active,
+    .languages__item-to--active {
+        outline: 3px solid green;
+        padding: 2px;
+        border-radius: 4px
+    }
+
+    .translate-list {
+        list-style-type: auto;
+    }
+
+    .translate-list__item {
+        font-size: 20px;
+        margin: 0 0 10px 20px;
+    }
+
+    .translate-list {
+        border: 1px solid;
+        border-radius: 4px;
+        min-height: 120px;
+        padding: 5px;
+        min-width: 150px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__from from">
+            <div class="to__languages languages">
+                <img id="enFrom" class="languages__item-from languages__item-from--active" height="20" src="gb.svg"/>
+                <img id="ruFrom" class="languages__item-from" height="20" src="ru.svg"/>
+                <img id="csFrom" class="languages__item-from" height="20" src="cz.svg"/>
+            </div>
+            <input id="from" placeholder="Input a word"/>
+        </div>
+        <div id="image" class="container__image">
+            <img width="24" height="24" src="arrow.png"/>
+        </div>
+
+        <div class="container__to to">
+            <div class="to__languages languages">
+                <img id="enTo" class="languages__item-to " height="20" src="gb.svg"/>
+                <img id="ruTo" class="languages__item-to languages__item-to--active" height="20" src="ru.svg"/>
+                <img id="csTo" class="languages__item-to" height="20" src="cz.svg"/>
+            </div>
+
+            <ul class="to__translate-list translate-list">
+                There will be a translation here
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="background.js"></script>
+</html>
